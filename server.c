@@ -102,3 +102,7 @@ void error_handling(char *msg) {
     fputc('\n', stderr);
     exit(0);
 }
+
+// 참고 블로그
+// https://velog.io/@dev-hoon/%EB%A9%80%ED%8B%B0-%EC%93%B0%EB%A0%88%EB%93%9C-%EA%B8%B0%EB%B0%98-%EB%8B%A4%EC%A4%91-%EC%B1%84%ED%8C%85
+
