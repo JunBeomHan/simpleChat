@@ -7,14 +7,13 @@
 #include <netinet/in.h>
 #include <pthread.h>
 
-#define BUF_SIZE 100 // 최대 글자 수
-#define MAX_CLNT 256 // 최대 동시 접속 가능 수
+#define BUF_SIZE 100
+#define MAX_CLNT 256
 
 void *handle_clnt(void *arg);
 void send_msg(char *msg, int len);
 void error_handling(char *msg);
 
-// 접속한 클라이언트
 int clnt_cnt; 
 int clnt_socks[MAX_CLNT];
 pthread_mutex_t mutx;
@@ -30,7 +29,6 @@ int main(int argc, char *argv[]) {
         exit(1); 
     }
 
-    //mutx init
     pthread_mutex_init(&mutx, NULL);
     
     serv_sock = socket(PF_INET, SOCK_STREAM, 0);
